@@ -1,0 +1,48 @@
+.check-list {
+  width: 100%;
+  &__title {
+    padding-bottom: 12px;
+  }
+  &__item {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    > a {
+      @include flex(center, flex-start);
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.item {
+  &__img {
+    @include flex();
+  }
+
+  &__wrap {
+    @include flex();
+    flex-direction: column;
+    width: 100%;
+    padding-left: 12px;
+  }
+
+  &__name {
+    @include flex(center, flex-start);
+    color: $color_text;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 600;
+  }
+
+  &__num {
+    @include flex(center, flex-start);
+    color: $color_text;
+    font-size: 16px;
+    width: 100%;
+  }
+}

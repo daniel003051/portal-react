@@ -1,0 +1,59 @@
+// @import '../assets/styles/mixin.scss';
+
+.bottom-bar {
+  @include flex();
+  position: static;
+  // width: 16%;
+  width: 16%;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  @include mobile {
+    position: fixed;
+    bottom: 4vw;
+    width: 92vw;
+    flex-direction: row;
+    padding: 2.8vw 2vw;
+  }
+  > li {
+    @include flex();
+    flex: 1;
+    width: 100%;
+    > a {
+      @include flex(center, flex-start);
+      width: 100%;
+      opacity: 0.4;
+      padding: 12px 20px;
+      @include mobile {
+        @include flex(center, space-between);
+        flex-direction: column;
+        padding: 2vw;
+      }
+      &.is-selected {
+        opacity: 1;
+        background-color: #bfbfbf;
+        @include mobile {
+          background-color: #fff;
+        }
+      }
+      > img {
+        width: 2vw;
+        margin-right: 8px;
+        @include mobile {
+          width: 8vw;
+          margin-right: 0;
+          margin-bottom: 4px;
+        }
+      }
+
+      > p {
+        font-size: 16px;
+        color: #333333;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.check-list {
+  > section {
+    padding-bottom: 20px;
+  }
+  h2 {
+    @include flex(center, space-between);
+    font-size: 24px;
+    color: #666666;
+    padding-bottom: 8px;
+    font-weight: 600;
+    a {
+      font-size: 20px;
+    }
+  }
+  .item {
+    background-color: #709ef3;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    color: #fff;
+    width: fit-content !important;
+
+    > img {
+      width: 20px;
+      margin-right: 8px;
+      object-fit: contain;
+      object-position: center;
+    }
+    span {
+      font-size: 16px;
+      color: #ffdad9;
+    }
+    > p {
+      font-size: 16px;
+    }
+  }
+}
+
+.swiper-wrapper {
+  margin-top: 20px;
+}
+
+.space-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  li {
+    @include flex();
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #efefef;
+    padding: 20px 0;
+    img {
+      width: 60%;
+      margin-bottom: 8px;
+    }
+  }
+}
